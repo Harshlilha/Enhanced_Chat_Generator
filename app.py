@@ -2,6 +2,7 @@
 from groq import Groq
 import gradio as gr
 import requests
+import os
 
 # Initialize the Groq client
 client = Groq(api_key="Replace with your api key")  # Replace with your actual API key
@@ -97,4 +98,8 @@ def build_ui():
 
 # Launch the Gradio app
 ui = build_ui()
-ui.launch(share=True)
+# Get the port from the environment variable (default to 8080 if not set)
+port = int(os.environ.get("PORT", 8080))
+
+# Launch Gradio on the specified port
+ui.launch(server_port=port, server_name="0.0.0.0")
