@@ -1,10 +1,7 @@
-# Install the necessary libraries
-!pip install gradio requests
-!pip install gradio groq
-
 # Import required libraries
 from groq import Groq
 import gradio as gr
+import requests
 
 # Initialize the Groq client
 client = Groq(api_key="Replace with your api key")  # Replace with your actual API key
