@@ -5,7 +5,7 @@ import requests
 import os
 
 # Initialize the Groq client
-client = Groq(api_key="Replace with your api key")  # Replace with your actual API key
+client = Groq(api_key="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")  # Replace with your actual API key
 
 
 # Function to handle Groq API chat completions
